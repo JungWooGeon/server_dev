@@ -75,23 +75,8 @@ WSGI_APPLICATION = 'perfectcushion.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-        'HOST': '127.0.0.1',
-        'USER': 'root',
-        'PASSWORD': 'password',
-        'PORT': '3306',
-        'OPTIONS': {'charset': 'utf8mb4'},
-    }
-}
-
-CACHES = {
-    'default' : {
-        'BACKEND' : 'django_redis.cache.RedisCache',
-        "LOCATION" : "redis://127.0.0.1",
-        "OPTIONS": { 
-            "CLIENT_CLASS" : "django_redis.client.DefaultClient",
-        }
     }
 }
 
